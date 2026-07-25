@@ -32,12 +32,15 @@ The app fetches live weather data via the **OpenWeatherMap API** and renders cur
 
 ## 🏗️ Architecture
 
-ForeCastify/
-├── index.html # Markup — layout, search form, weather card, forecast list
-├── Style.css # Styling — responsive layout, card design, iconography
-├── Script.js # Logic — API calls, DOM updates, event handling
-└── preview.png # App preview screenshot
+## 📁 Project Structure
 
+```
+ForeCastify/
+├── index.html      # Markup — layout, search form, weather card, forecast list
+├── Style.css        # Styling — responsive layout, card design, iconography
+├── Script.js         # Logic — API calls, DOM updates, event handling
+└── preview.png       # App preview screenshot
+```
 **Design approach:** UI and logic are intentionally decoupled — `index.html` defines static structure and placeholder elements, while `Script.js` owns all dynamic behavior (fetching data and updating the DOM). This keeps the codebase easy to reason about without a templating layer.
 
 ## 🛠️ Tech Stack
