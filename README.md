@@ -1,67 +1,73 @@
-# DSA Session Plan – Prefix Sum & Sliding Window Techniques
+# 🌤️ ForeCastify
 
-## MONDAY SESSION
+> A lightweight, framework-free weather application delivering real-time conditions and multi-day forecasts through a clean, responsive interface.
 
-# Topic 1: Prefix Sum & Range Query Algorithms
+<p align="center">
+  <img src="preview.png" alt="ForeCastify Preview" width="80%"/>
+</p>
 
-## Concepts That Will Be Covered
-- Prefix Sum Algorithm
-- Difference Array Technique
-- Range Sum Query
-- Kadane’s Algorithm
-- Maximum Prefix Sum
-
-## What Students Will Learn
-
-In this session, students will understand how to optimize array-related problems using Prefix Sum techniques. The session will focus on reducing unnecessary repeated calculations and improving time complexity from brute-force approaches to optimized solutions.
-
-Students will also learn:
-- How Prefix Sum works internally
-- How Range Queries are solved efficiently
-- How Kadane’s Algorithm is used to find maximum subarray sums
-- How optimization techniques improve coding performance in interviews and competitive programming
-
-## LeetCode Problems for Practice
-
-| Concept | LeetCode Problem No. | Problem Title |
-|----------|----------------------|----------------|
-| Prefix Sum | 1480 | Running Sum of 1D Array |
-| Range Sum Query | 303 | Range Sum Query – Immutable |
-| Kadane’s Algorithm | 53 | Maximum Subarray |
-| Prefix Sum + Hashing | 560 | Subarray Sum Equals K |
-| Difference Array Technique | 370 | Range Addition |
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/OpenWeatherMap%20API-EB6E4B?style=for-the-badge&logo=openweathermap&logoColor=white"/>
+</p>
 
 ---
 
-## TUESDAY SESSION
+## 📖 Overview
 
-# Topic 2: Sliding Window Algorithms
+ForeCastify is a client-side weather dashboard built with **vanilla JavaScript** — no framework overhead, no build step. It demonstrates core front-end engineering fundamentals: asynchronous API integration, DOM manipulation, and responsive UI design, all in a dependency-light codebase.
 
-## Concepts That Will Be Covered
-- Fixed Size Sliding Window
-- Variable Size Sliding Window
-- Maximum Sum Subarray
-- Longest Subarray Problems
-- Minimum Window Problems
+The app fetches live weather data via the **OpenWeatherMap API** and renders current conditions alongside a scrollable multi-day forecast, with location search handled entirely client-side.
 
-## What Students Will Learn
+## ✨ Features
 
-This session will focus on solving subarray and substring problems efficiently using Sliding Window techniques. Students will learn how to replace nested loop approaches with optimized window-based solutions.
+- 🔍 **Location Search** — Look up weather for any city via a simple search input
+- 🌡️ **Live Conditions Card** — Displays current temperature, weather description, humidity, and wind speed
+- 📅 **Multi-Day Forecast Strip** — Horizontally scrollable forecast list with per-day icons and temperatures
+- 🎨 **Dynamic Weather Icons** — Condition-based icons rendered directly from the OpenWeatherMap icon set
+- 📱 **Responsive Layout** — Adapts cleanly across desktop and mobile viewports
+- ⚡ **Zero Build Tooling** — Pure HTML/CSS/JS; runs directly in the browser, no bundler required
 
-The session will include:
-- Understanding fixed and variable window patterns
-- Solving longest and minimum window problems
-- Learning optimization strategies frequently asked in interviews
-- Building logical thinking for medium-level DSA problems
+## 🏗️ Architecture
 
-## LeetCode Problems for Practice
+ForeCastify/
+├── index.html # Markup — layout, search form, weather card, forecast list
+├── Style.css # Styling — responsive layout, card design, iconography
+├── Script.js # Logic — API calls, DOM updates, event handling
+└── preview.png # App preview screenshot
 
-| Concept | LeetCode Problem No. | Problem Title |
-|----------|----------------------|----------------|
-| Fixed Size Sliding Window | 643 | Maximum Average Subarray I |
-| Variable Size Sliding Window | 209 | Minimum Size Subarray Sum |
-| Longest Subarray / Substring | 3 | Longest Substring Without Repeating Characters |
-| Minimum Window Problem | 76 | Minimum Window Substring |
-| Sliding Window Optimization | 239 | Sliding Window Maximum |
+**Design approach:** UI and logic are intentionally decoupled — `index.html` defines static structure and placeholder elements, while `Script.js` owns all dynamic behavior (fetching data and updating the DOM). This keeps the codebase easy to reason about without a templating layer.
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Structure | HTML5 |
+| Styling | CSS3 (Flexbox-based responsive layout) |
+| Logic | Vanilla JavaScript (ES6+, Fetch API) |
+| Data Source | OpenWeatherMap API |
+
+## 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/samirsinghkshatriya/ForeCastify.git
+cd ForeCastify
+
+# Open directly in browser
+open index.html
+```
+
+> Requires a valid [OpenWeatherMap API key](https://openweathermap.org/api) — add it in `Script.js` before running.
+
+## 🔮 Potential Enhancements
+
+- [ ] Geolocation-based auto-detect for user's current city
+- [ ] Unit toggle (°C / °F)
+- [ ] Error handling & loading states for failed/slow API calls
+- [ ] LocalStorage caching to reduce redundant API calls
+- [ ] Migrate to a component-based framework (React) for state management at scale
 
 ---
